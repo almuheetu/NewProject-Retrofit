@@ -49,7 +49,7 @@ class DistrictFragment : Fragment() {
                 Log.d("response", result.body().toString())
                 val allDistricts = result.body()!!
                 val filteredDistricts = allDistricts.filter { it.id == divisionId }
-                districtAdapter = DistrictAdapter(filteredDistricts)
+                districtAdapter = DistrictAdapter(filteredDistricts[0].districts)
                 recyclerView.adapter = districtAdapter
             }
         }

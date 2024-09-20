@@ -13,8 +13,7 @@ class DistrictAdapter(
     private val districtList: List<District>,
 
 
-
-) : RecyclerView.Adapter<DistrictAdapter.ViewHolder>() {
+    ) : RecyclerView.Adapter<DistrictAdapter.ViewHolder>() {
     class ViewHolder(var binding: AdapterDistrictBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
@@ -28,16 +27,13 @@ class DistrictAdapter(
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val district = districtList[position]
-        viewHolder.binding.tvDistrictName.text =  district.name
+        viewHolder.binding.tvDistrictName.text = district.name
 
     }
 
-    override fun getItemCount(): Int{
+    override fun getItemCount(): Int {
         return districtList.size
 
     }
-
-
-
 
 }

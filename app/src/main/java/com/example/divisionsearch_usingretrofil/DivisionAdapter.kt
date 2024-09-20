@@ -8,10 +8,14 @@ import com.example.divisionsearch_usingretrofil.databinding.AdapterDivisionBindi
 
 class DivisionAdapter(
     private val divisionList: ArrayList<DivisionResponseItem>,
-    private val listener: ItemClickListener
 
-) : RecyclerView.Adapter<DivisionAdapter.ViewHolder>() {
+
+    ) : RecyclerView.Adapter<DivisionAdapter.ViewHolder>() {
     class ViewHolder(var binding: AdapterDivisionBinding) : RecyclerView.ViewHolder(binding.root)
+
+    companion object {
+        var listener: ItemClickListener? = null
+    }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val binding = AdapterDivisionBinding.inflate(
@@ -24,9 +28,9 @@ class DivisionAdapter(
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val division = divisionList[position]
-        viewHolder.binding.tvEmployeeDivisionName.text =  division.name
+        viewHolder.binding.tvEmployeeDivisionName.text = division.name
         viewHolder.itemView.setOnClickListener {
-            listener.onItemClick(division)
+            listener?.onItemClick(division)
         }
     }
 
@@ -38,5 +42,6 @@ class DivisionAdapter(
         fun onItemClick(division: DivisionResponseItem)
 
     }
+
 
 }

@@ -31,13 +31,13 @@ class DivisionFragment : Fragment(), DivisionAdapter.ItemClickListener {
 
         val recyclerView: RecyclerView = binding.divisionRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
+        DivisionAdapter.listener = this
         val responseApi = RetrofitHelper.getInstance().create(ResponseApi::class.java)
         GlobalScope.launch(Dispatchers.Main) {
             val result = responseApi.getDivision()
             if (result.body() != null) {
                 Log.d("response", result.body().toString())
-                divisionAdapter = DivisionAdapter(result.body()!!, this@DivisionFragment)
+                divisionAdapter = DivisionAdapter(result.body()!!)
                 recyclerView.adapter = divisionAdapter
             }
         }
