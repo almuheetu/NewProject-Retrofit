@@ -3,17 +3,13 @@ package com.example.divisionsearch_usingretrofil
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
-import com.example.divisionsearch_usingretrofil.databinding.AdapterDistrictBinding
-import com.example.divisionsearch_usingretrofil.databinding.AdapterDivisionBinding
 import com.example.divisionsearch_usingretrofil.databinding.FragmentDistrictListBinding
-import com.example.divisionsearch_usingretrofil.placeholder.PlaceholderContent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
