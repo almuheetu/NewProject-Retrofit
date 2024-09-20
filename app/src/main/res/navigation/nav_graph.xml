@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/divisionFragment">
+
+    <fragment
+        android:id="@+id/divisionFragment"
+        android:name="com.example.divisionsearch_usingretrofil.DivisionFragment"
+        android:label="fragment_division_list"
+        tools:layout="@layout/fragment_division_list" >
+        <action
+            android:id="@+id/action_divisionFragment_to_districtFragment"
+            app:destination="@id/districtFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/districtFragment"
+        android:name="com.example.divisionsearch_usingretrofil.DistrictFragment"
+        android:label="fragment_district_list"
+        tools:layout="@layout/fragment_district_list" >
+        <action
+            android:id="@+id/action_districtFragment_to_divisionFragment"
+            app:destination="@id/divisionFragment" />
+        <argument android:name="data"
+            app:argType="com.example.divisionsearch_usingretrofil.DivisionResponseItem" />
+    </fragment>
+</navigation>
