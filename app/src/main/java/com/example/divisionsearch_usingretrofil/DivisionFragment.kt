@@ -45,6 +45,7 @@ class DivisionFragment : Fragment(), DivisionAdapter.ItemClickListener {
 
     override fun onItemClick(division: DivisionResponseItem) {
         val action = DivisionFragmentDirections.actionDivisionFragmentToDistrictFragment(division)
+
         findNavController().navigate(action)
     }
 }

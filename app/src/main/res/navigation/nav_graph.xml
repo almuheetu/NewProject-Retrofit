@@ -19,9 +19,7 @@
         android:name="com.example.divisionsearch_usingretrofil.DistrictFragment"
         android:label="fragment_district_list"
         tools:layout="@layout/fragment_district_list" >
-        <action
-            android:id="@+id/action_districtFragment_to_divisionFragment"
-            app:destination="@id/divisionFragment" />
+
         <argument android:name="data"
             app:argType="com.example.divisionsearch_usingretrofil.DivisionResponseItem" />
     </fragment>

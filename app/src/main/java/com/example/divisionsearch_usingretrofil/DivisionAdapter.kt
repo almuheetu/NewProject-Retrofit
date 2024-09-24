@@ -7,10 +7,9 @@ import com.example.divisionsearch_usingretrofil.databinding.AdapterDivisionBindi
 
 
 class DivisionAdapter(
-    private val divisionList: ArrayList<DivisionResponseItem>,
-
-
+    private val divisionList: List<DivisionResponseItem>,
     ) : RecyclerView.Adapter<DivisionAdapter.ViewHolder>() {
+
     class ViewHolder(var binding: AdapterDivisionBinding) : RecyclerView.ViewHolder(binding.root)
 
     companion object {
